@@ -30,15 +30,14 @@ if type(output) == list:
 else:
     print(output)
 
-restart = input("Would you like to restart this program? ")
 
-if restart == "yes" or restart == "y":
+while True:
+    restart = input("Would you like to restart this program? type y if yes or n if no ")
+
+    if restart == "yes" or restart == "y":
         word = input("please enter word: ")
         output = translate(word)
 
-if type(output) == list:
-    for item in output:
-        print(item)
-
-if restart == "n" or restart == "no":
-             print ("Script terminating. Goodbye.")
+    if restart == "n" or restart == "no":
+             print ("program terminating. Goodbye.")
+             break
